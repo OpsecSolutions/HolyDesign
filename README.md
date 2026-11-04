@@ -1,49 +1,38 @@
 # HolyDesign
 
-HolyDesign é um framework rigoroso para orientar IAs na criação de interfaces pragmáticas, limpas e sem vícios visuais recorrentes de designs gerados por IA. As diretrizes cobrem sites, aplicações web, interfaces de mods, jogos e dashboards.
+HolyDesign is a framework designed to guide AIs in designing, without the stupid "purple gradients" and some shi.
+- Thank you so much Codex/ChatGPT and Gemini. -
 
-## Conteúdo
+## Contents
 
-- `Skill.md`: regras obrigatórias de design para orientar a IA.
-- `templates/base.css`: reset moderno e variáveis para uma base visual simples, legível e responsiva.
-- `install.js`: instala as diretrizes no projeto em que for executado.
+- `Skill.md`: Mandatory design rules to guide the AI
+- `templates/`: Some template so the AI knows how tf the project works
+- `install.js`: A script to install the guidelines into your project
 
-## Como usar a skill
+## How to use the framework
 
-### Uso manual
+### Manual usage
 
-1. Abra `Skill.md` neste repositório.
-2. Inclua seu conteúdo no contexto do assistente de IA ou peça que ele leia o arquivo antes de criar ou alterar uma interface.
-3. Informe os requisitos específicos do projeto. As regras do HolyDesign devem orientar a solução junto com esses requisitos.
+1. Open `Skill.md` in this repository.
+2. Include its content in your AI assistant's context, or ask the AI ​​to read the file before creating or modifying an interface.
+3. Provide your project-specific requirements. The HolyDesign rules should guide the solution alongside these requirements.
 
-### Instalação em outro projeto
+### Installation in a project
 
-Com Node.js instalado, execute o instalador a partir do diretório do projeto que receberá as regras:
+With Node.js installed, run the installer from the directory of the project where you wish to apply the rules:
 
 ```bash
-node /caminho/para/HolyDesign/install.js
+node install.js
 ```
 
-No Windows, por exemplo:
+On Windows, for example:
 
 ```powershell
-node C:\caminho\para\HolyDesign\install.js
+node install.js
 ```
 
-O instalador cria `.holydesign/Skill.md` no diretório de execução e um `.cursorrules` que instrui o assistente a ler as diretrizes. Mantenha os dois arquivos versionados no projeto para que a regra acompanhe o código.
+The installer creates a `.holydesign/Skill.md` file in your current directory, along with a `.cursorrules` file that instructs the AI ​​assistant to follow these guidelines. Keep both files under version control so that the rules remain tied to your codebase.
 
-### Aplicar a base CSS
+### Applying the base CSS
 
-Copie `templates/base.css` para a camada de estilos do projeto e importe-o antes dos estilos dos componentes. Ajuste as variáveis de cor e tipografia às necessidades do produto, mantendo contraste, simplicidade e responsividade.
-
-## Princípios
-
-- Layouts responsivos desde telas pequenas.
-- Hierarquia construída com tipografia, espaçamento e alinhamento.
-- CSS modular, sem dependência de Tailwind por padrão.
-- Rodapé com links ou páginas de Privacidade e Termos de Serviço.
-- Sem gradientes roxo e azul, elementos decorativos clichês ou adornos que prejudiquem a leitura.
-
-## Licença
-
-A licença deste projeto ainda não foi definida.
+Copy `templates/base.css` into your project’s style layer and import it before your component-specific styles. Adjust the color and typography variables to suit your product's needs, while ensuring proper contrast, simplicity, and responsiveness.
