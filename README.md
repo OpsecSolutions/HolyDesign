@@ -6,7 +6,7 @@ HolyDesign is a framework designed to guide AIs in designing, without the stupid
 ## Contents
 
 - `Skill.md`: Mandatory design rules to guide the AI
-- `templates/`: Some template so the AI knows how tf the project works
+- `templates/`: Some template so the AI knows how tf the project works - YES I LOST MY TOKENS FOR YOU
 - `install.js`: A script to install the guidelines into your project
 
 ## How to use the framework
@@ -22,12 +22,6 @@ HolyDesign is a framework designed to guide AIs in designing, without the stupid
 With Node.js installed, run the installer from the directory of the project where you wish to apply the rules:
 
 ```bash
-node install.js
-```
-
-On Windows, for example:
-
-```powershell
 node install.js
 ```
 
