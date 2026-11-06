@@ -1,32 +1,41 @@
 # HolyDesign
 
-HolyDesign is a framework designed to guide AIs in designing, without the stupid "purple gradients" and some shi.
-- Thank you so much Codex/ChatGPT and Gemini. -
+HolyDesign é um conjunto rigoroso de diretrizes e templates para orientar agentes de IA a criar interfaces pragmáticas, legíveis e responsivas, sem os clichês visuais recorrentes em designs gerados por IA.
 
-## Contents
+O repositório inclui uma skill reutilizável chamada `/holydesign`, com os templates do projeto empacotados junto das instruções.
 
-- `Skill.md`: Mandatory design rules to guide the AI
-- `templates/`: Some template so the AI knows how tf the project works - YES I LOST MY TOKENS FOR YOU
-- `install.js`: A script to install the guidelines into your project
+## Instalação automática
 
-## How to use the framework
-
-### Manual usage
-
-1. Open `Skill.md` in this repository.
-2. Include its content in your AI assistant's context, or ask the AI ​​to read the file before creating or modifying an interface.
-3. Provide your project-specific requirements. The HolyDesign rules should guide the solution alongside these requirements.
-
-### Installation in a project
-
-With Node.js installed, run the installer from the directory of the project where you wish to apply the rules:
+Requer Node.js. Na raiz deste repositório, execute:
 
 ```bash
 node install.js
 ```
 
-The installer creates a `.holydesign/Skill.md` file in your current directory, along with a `.cursorrules` file that instructs the AI ​​assistant to follow these guidelines. Keep both files under version control so that the rules remain tied to your codebase.
+O instalador procura executáveis no `PATH` e diretórios de configuração do usuário para detectar:
 
-### Applying the base CSS
+- Codex
+- Claude Code
+- Cursor
+- Google Antigravity App e CLI
+- Gemini CLI
 
-Copy `templates/base.css` into your project’s style layer and import it before your component-specific styles. Adjust the color and typography variables to suit your product's needs, while ensuring proper contrast, simplicity, and responsiveness.
+Em cada harness detectado, cria ou atualiza a skill global `holydesign` e copia a pasta `templates/` para dentro dela. A instalação usa os diretórios padrão de skills de cada ferramenta. Se já houver uma pasta `holydesign` que não pareça pertencer ao HolyDesign, o instalador a preserva e informa que a ignorou.
+
+Depois de instalar, reinicie ou recarregue o harness e invoque `/holydesign` no chat. Alguns agentes também selecionam a skill automaticamente quando o pedido envolve criação ou alteração de interfaces.
+
+Se nenhum harness for detectado, o instalador informa isso sem criar arquivos fora do repositório.
+
+## Instalação manual
+
+Uma skill compatível com Agent Skills é uma pasta que contém `SKILL.md` e seus recursos. Para instalar manualmente, crie uma pasta `holydesign` em um diretório de skills reconhecido pelo seu agente, coloque nela um `SKILL.md` com metadados `name` e `description`, e copie a pasta `templates/` para o mesmo local.
+
+## Arquivos
+
+- `Skill.md`: diretrizes de design do HolyDesign.
+- `templates/`: exemplos e recursos que acompanham a skill.
+- `install.js`: instalador global para os harnesses reconhecidos.
+
+## Desenvolvimento
+
+Edite `Skill.md` para atualizar as regras e `templates/` para adicionar ou alterar recursos. Execute novamente `node install.js` para propagar as alterações às instalações globais detectadas.
