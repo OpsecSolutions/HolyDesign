@@ -1,41 +1,43 @@
 # HolyDesign
 
-HolyDesign é um conjunto rigoroso de diretrizes e templates para orientar agentes de IA a criar interfaces pragmáticas, legíveis e responsivas, sem os clichês visuais recorrentes em designs gerados por IA.
+HolyDesign is a rigorous set of guidelines and templates designed to steer AI agents toward creating pragmatic, readable, and responsive interfaces—free from the visual clichés often found in AI-generated designs.
 
-O repositório inclui uma skill reutilizável chamada `/holydesign`, com os templates do projeto empacotados junto das instruções.
+The repository includes a reusable skill called `/holydesign`, which bundles the project’s templates alongside the necessary instructions.
 
-## Instalação automática
+## Automatic Installation
 
-Requer Node.js. Na raiz deste repositório, execute:
+Requires Node.js. From the root of this repository, run:
 
 ```bash
 node install.js
 ```
 
-O instalador procura executáveis no `PATH` e diretórios de configuração do usuário para detectar:
+The installer scans your `PATH` and user configuration directories to detect the following:
 
 - Codex
 - Claude Code
 - Cursor
-- Google Antigravity App e CLI
+- Google Antigravity (app and CLI)
 - Gemini CLI
 
-Em cada harness detectado, cria ou atualiza a skill global `holydesign` e copia a pasta `templates/` para dentro dela. A instalação usa os diretórios padrão de skills de cada ferramenta. Se já houver uma pasta `holydesign` que não pareça pertencer ao HolyDesign, o instalador a preserva e informa que a ignorou.
+For each detected tool, it creates or updates a global `holydesign` skill and copies the `templates/` folder into it, using the tool's standard directory for skills. If a `holydesign` folder already exists but does not appear to belong to this project, the installer will preserve it and notify you that it has been skipped.
 
-Depois de instalar, reinicie ou recarregue o harness e invoque `/holydesign` no chat. Alguns agentes também selecionam a skill automaticamente quando o pedido envolve criação ou alteração de interfaces.
+Once installed, restart or reload your AI agent and invoke `/holydesign` within the chat. Some agents may also automatically select this skill when a request involves creating or modifying interfaces.
 
-Se nenhum harness for detectado, o instalador informa isso sem criar arquivos fora do repositório.
+If no supported tools are detected, the installer will inform you accordingly without creating any files outside of this repository.
 
-## Instalação manual
+## Manual Installation
 
-Uma skill compatível com Agent Skills é uma pasta que contém `SKILL.md` e seus recursos. Para instalar manualmente, crie uma pasta `holydesign` em um diretório de skills reconhecido pelo seu agente, coloque nela um `SKILL.md` com metadados `name` e `description`, e copie a pasta `templates/` para o mesmo local.
+An "Agent Skill" consists of a folder containing a `SKILL.md` file and its associated resources. To install manually, create a `holydesign` folder within a directory recognized by your AI agent, add a `SKILL.md` file (including `name` and `description` metadata), and copy the `templates/` folder into that same location.
 
-## Arquivos
+## Credits
 
-- `Skill.md`: diretrizes de design do HolyDesign.
-- `templates/`: exemplos e recursos que acompanham a skill.
-- `install.js`: instalador global para os harnesses reconhecidos.
+https://github.com/realidkroo/Mochy-Music: This site was used as a template. ## Files
 
-## Desenvolvimento
+- `Skill.md`: HolyDesign design guidelines.
+- `templates/`: examples and resources that accompany the skill.
+- `install.js`: global installer for recognized harnesses.
 
-Edite `Skill.md` para atualizar as regras e `templates/` para adicionar ou alterar recursos. Execute novamente `node install.js` para propagar as alterações às instalações globais detectadas.
+## Development
+
+Edit `Skill.md` to update rules, and modify `templates/` to add or change resources. Run `node install.js` again to propagate changes to any detected global installations.
